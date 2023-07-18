@@ -1,0 +1,74 @@
+{
+	"": {
+		"prefix": "cptemplate",
+		"body": [
+			"import sys",
+			"sys.setrecursionlimit(2147483647)",
+			"MOD = 1000000007",
+			"input = sys.stdin.readline",
+			"",
+			"def debug(*args):",
+			"    print(*args, file=sys.stderr)",
+			"",
+			"def solve():",
+			"    # int(input())",
+			"    # map(int,input().split())",
+			"    # list(map(int,input().split()))",
+			"    $0",
+			"",
+			"",
+			"t = int(sys.stdin.readline().strip())",
+			"for _ in range(t):",
+			"    solve()"
+		],
+		"description": ""
+	},
+	"for loop: i from 0 to n-1": {
+		"prefix": "fori0",
+		"body": [
+			"for i in range(n):",
+			"\t$0"
+		],
+		"description": "Create a for loop with i ranging from 0 to n-1"
+	},
+	"for loop: i from 1 to n": {
+		"prefix": "fori1",
+		"body": [
+			"for i in range(1, n+1):",
+			"\t$0"
+		],
+		"description": "Create a for loop with i ranging from 1 to n"
+	},
+	"for loop: j from 0 to n-1": {
+		"prefix": "forj0",
+		"body": [
+			"for j in range(n):",
+			"\t$0"
+		],
+		"description": "Create a for loop with j ranging from 0 to n-1"
+	},
+	"for loop: j from 1 to n": {
+		"prefix": "forj1",
+		"body": [
+			"for j in range(1, n+1):",
+			"\t$0"
+		],
+		"description": "Create a for loop with j ranging from 1 to n"
+	},
+	"for loop: k from 0 to n-1": {
+		"prefix": "fork0",
+		"body": [
+			"for k in range(n):",
+			"\t$0"
+		],
+		"description": "Create a for loop with k ranging from 0 to n-1"
+	},
+	"for loop: k from 1 to n": {
+		"prefix": "fork1",
+		"body": [
+			"for k in range(1, n+1):",
+			"\t$0"
+		],
+		"description": "Create a for loop with k ranging from 1 to n"
+	}
+}
