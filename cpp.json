@@ -5,7 +5,13 @@
 		  "#include<bits/stdc++.h>",
 		  "using namespace std;",
 		  "",
+		  "// #include <ext/pb_ds/assoc_container.hpp>",
+		  "// #include <ext/pb_ds/tree_policy.hpp>",
+		  "// using namespace __gnu_pbds;",
+		  "// template<class T> using ordered_set =tree<T, null_type, less<T>, rb_tree_tag,tree_order_statistics_node_update>;",
+		  "",
 		  "#define int long long int",
+		  "#define double long double",
 		  "#define endl '\\n'",
 		  "typedef long long ll;",
 		  "",
@@ -20,7 +26,6 @@
 		  "void _print(int t) {cerr << t;}",
 		  "void _print(string t) {cerr << t;}",
 		  "void _print(char t) {cerr << t;}",
-		  "void _print(long double t) {cerr << t;}",
 		  "void _print(double t) {cerr << t;}",
 		  "void _print(unsigned int t) {cerr << t;}",
 		  "",
@@ -45,11 +50,34 @@
 		  "    ios_base::sync_with_stdio(0);",
 		  "    cin.tie(0);cout.tie(0);",
 		  "",
-		  "    int t;",
+		  "    int t=1;",
 		  "    cin>>t;",
 		  "    while(t--){",
 		  "        solve();",
 		  "    }",
+		  "",
+		  "    return 0;",
+		  "}"
+		],
+		"description": ""
+	  },
+	"t2": {
+		"prefix": "normaltemplate",
+		"body": [
+		  "#include<bits/stdc++.h>",
+		  "using namespace std;",
+		  "",
+		  "#define int long long int",
+		  "#define endl '\\n'",
+		  "",
+		  "const int MOD = 1000000007;",
+		  "",
+		  "signed main()",
+		  "{",
+		  "    ios_base::sync_with_stdio(0);",
+		  "    cin.tie(0);cout.tie(0);",
+		  "",
+		  "\t$0",
 		  "",
 		  "    return 0;",
 		  "}"
@@ -147,5 +175,32 @@
 			"}"
 		],
 		"description": "Create a for loop with k ranging from 1 to n"
-	}
+	},
+	"geometry template for point": {
+		"prefix": "pointtemplate",
+		"body": [
+		  "struct P {",
+		  "    int x,y;",
+		  "    void read() {",
+		  "        cin>>x>>y;",
+		  "    }",
+		  "    P operator - (const P &b) const {",
+		  "        return P {x-b.x , y-b.y};",
+		  "    }",
+		  "    P operator + (const P &b) const {",
+		  "        return P {x+b.x , y+b.y};",
+		  "    }",
+		  "    void operator -= (const P &b)  {",
+		  "        x-=b.x; y-=b.y;",
+		  "    }",
+		  "    void operator += (const P &b)  {",
+		  "        x+=b.x; y+=b.y;",
+		  "    }",
+		  "    int operator *(const P &b) const {",
+		  "        return x*b.y - y*b.x;",
+		  "    }",
+		  "};"
+		],
+		"description": ""
+	  }
 }
