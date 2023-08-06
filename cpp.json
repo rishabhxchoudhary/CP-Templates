@@ -12,7 +12,7 @@
 		  "const int MOD = 1000000007;",
 		  "",
 		  "void solve(){",
-		  "    ",
+		  "    $0",
 		  "}",
 		  "",
 		  "signed main()",
