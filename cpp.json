@@ -33,7 +33,7 @@
 		"description": "C++ template for competitive programming"
 	},
 	"cpp-code": {
-		"prefix": "code",
+		"prefix": "normaltemplate",
 		"body": [
 			"#include <bits/stdc++.h>",
 			"using namespace std;",
@@ -938,9 +938,6 @@
 	"Kosaraju's Algorithm": {
 		"prefix": "kosaraju",
 		"body": [
-			"#include <bits/stdc++.h>",
-			"using namespace std;",
-			"",
 			"void dfsUtil(int u, vector<bool>& visited, stack<int>& stk, vector<vector<int>>& graph) {",
 			"    visited[u] = true;",
 			"    for (int v : graph[u]) {",
@@ -997,9 +994,6 @@
 	"Tarjan's Algorithm": {
 		"prefix": "tarjan",
 		"body": [
-			"#include <bits/stdc++.h>",
-			"using namespace std;",
-			"",
 			"void tarjanDFS(int u, vector<int>& disc, vector<int>& low, vector<bool>& inStack,",
 			"               stack<int>& stk, int& time, vector<vector<int>>& graph, vector<vector<int>>& SCC) {",
 			"    disc[u] = low[u] = ++time;",
