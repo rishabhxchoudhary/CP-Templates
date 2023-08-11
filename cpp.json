@@ -1145,5 +1145,43 @@
 			"};"
 		],
 		"description": "Treap Template C++"
-	}
+	},
+	"CHT": {
+		"prefix": "cht",
+		"body": [
+		  "struct Line {",
+		  "    int m, b;",
+		  "    Line (int m, int b) : m(m), b(b) {}",
+		  "    int eval(int x) {",
+		  "        return m * x + b;",
+		  "    }",
+		  "};",
+		  "",
+		  "struct CHT {",
+		  "    deque<Line> lines;",
+		  "",
+		  "    // Adds a line to the convex hull",
+		  "    void addLine(int m, int b) {",
+		  "        Line newLine(m, b);",
+		  "        while (lines.size() >= 2) {",
+		  "            Line& L2 = lines.back();",
+		  "            Line& L1 = lines[lines.size() - 2];",
+		  "            if ((L2.b - L1.b) * (newLine.m - L2.m) <= (L2.m - L1.m) * (L1.b - newLine.b)) // >= for minimum",
+		  "                lines.pop_back();",
+		  "            else",
+		  "                break;",
+		  "        }",
+		  "        lines.push_back(newLine);",
+		  "    }",
+		  "",
+		  "    // Returns the maximum value of the lines at point x",
+		  "    int query(int x) {",
+		  "        while (lines.size() >= 2 && lines[0].eval(x) < lines[1].eval(x)) // >= for minimum ",
+		  "            lines.pop_front();",
+		  "        return lines.front().eval(x);",
+		  "    }",
+		  "};"
+		],
+		"description": "CHT"
+	  }
 }
