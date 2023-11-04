@@ -1,0 +1,169 @@
+{
+	// Place your snippets for java here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"": {
+		"prefix": "normaltemplate",
+		"body": [
+		  "import java.io.*;",
+		  "import java.util.*;",
+		  "",
+		  "class FastIO extends PrintWriter{",
+		  "    private InputStream stream;private byte[]buf=new byte[1<<16];",
+		  "    private int curChar,numChars;public FastIO(){this(System.in,System.out);}",
+		  "    public FastIO(InputStream i,OutputStream o){super(o);stream=i;}",
+		  "    public FastIO(String i,String o)throws IOException{super(new FileWriter(o));stream=new FileInputStream(i);}",
+		  "    private int nextByte(){if(numChars==-1)throw new InputMismatchException();if(curChar>=numChars){curChar=0;try{numChars=stream.read(buf);}catch(IOException e){throw new InputMismatchException();}if(numChars==-1)return -1;}return buf[curChar++];}",
+		  "    public String nextLine(){int c;do{c=nextByte();}while(c<='\\n');StringBuilder res=new StringBuilder();do{res.appendCodePoint(c);c=nextByte();}while(c>'\\n');return res.toString();}",
+		  "    public String next(){int c;do{c=nextByte();}while(c<=' ');StringBuilder res=new StringBuilder();do{res.appendCodePoint(c);c=nextByte();}while(c>' ');return res.toString();}",
+		  "    public int nextInt(){int c;do{c=nextByte();}while(c<=' ');int sgn=1;if(c=='-'){sgn=-1;c=nextByte();}int res=0;do{if(c<'0'||c>'9')throw new InputMismatchException();res=10*res+c-'0';c=nextByte();}while(c>' ');return res * sgn;}",
+		  "    public long nextLong(){int c;do{c=nextByte();}while(c<=' ');long sgn=1;if(c=='-'){sgn=-1;c=nextByte();}long res=0;do{if(c<'0'||c>'9')throw new InputMismatchException();res=10*res+c-'0';c=nextByte();}while(c>' ');return res * sgn;}",
+		  "    public double nextDouble(){return Double.parseDouble(next());",
+		  "    }",
+		  "}",
+		  "",
+		  "public class $0 {",
+		  "    public static void sort(int[]arr){",
+		  "        if(arr==null){return;}int n=arr.length;if(n<2){return;}int mid=n/2;int[]left=new int[mid];int[]right=new int[n - mid];",
+		  "        System.arraycopy(arr,0,left,0,mid);System.arraycopy(arr,mid,right,0,n - mid);",
+		  "        sort(left);sort(right);merge(arr,left,right);",
+		  "    }",
+		  "    private static void merge(int[]arr,int[]left,int[]right){",
+		  "        int i=0,j=0,k=0;int leftLength=left.length;",
+		  "        int rightLength=right.length;while(i<leftLength&&j<rightLength)",
+		  "        {if(left[i]<=right[j]){arr[k++]=left[i++];}else{arr[k++]=right[j++];}}",
+		  "        while(i<leftLength){arr[k++]=left[i++];}while(j<rightLength){arr[k++]=right[j++];}",
+		  "    }",
+		  "",
+		  "    static FastIO sc = new FastIO();",
+		  "    public static void main(String args[]){",
+		  "        ",
+		  "        sc.flush();",
+		  "    }",
+		  "}",
+		  "",
+		  ""
+		],
+		"description": ""
+	  },
+
+	  "java-for-loop-i-0-to-n-1": {
+		"prefix": "fori0",
+		"body": [
+			"for (int i = 0; i < n; i++) {",
+			"\t$0",
+			"}"
+		],
+		"description": "Create a for loop with 'i' ranging from 0 to n-1"
+	},
+	"java-for-loop-i-1-to-n": {
+		"prefix": "fori1",
+		"body": [
+			"for (int i = 1; i <= n; i++) {",
+			"\t$0",
+			"}"
+		],
+		"description": "Create a for loop with 'i' ranging from 1 to n"
+	},
+	"java-for-loop-j-0-to-n-1": {
+		"prefix": "forj0",
+		"body": [
+			"for (int j = 0; j < n; j++) {",
+			"\t$0",
+			"}"
+		],
+		"description": "Create a for loop with 'j' ranging from 0 to n-1"
+	},
+	"java-for-loop-j-1-to-n": {
+		"prefix": "forj1",
+		"body": [
+			"for (int j = 1; j <= n; j++) {",
+			"\t$0",
+			"}"
+		],
+		"description": "Create a for loop with 'j' ranging from 1 to n"
+	},
+	"java-for-loop-k-0-to-n-1": {
+		"prefix": "fork0",
+		"body": [
+			"for (int k = 0; k < n; k++) {",
+			"\t$0",
+			"}"
+		],
+		"description": "Create a for loop with 'k' ranging from 0 to n-1"
+	},
+	"java-for-loop-k-1-to-n": {
+		"prefix": "fork1",
+		"body": [
+			"for (int k = 1; k <= n; k++) {",
+			"\t$0",
+			"}"
+		],
+		"description": "Create a for loop with 'k' ranging from 1 to n"
+	},
+	"java-reverse-for-loop-i-n-1-to-0": {
+		"prefix": "rfori0",
+		"body": [
+			"for (int i = n - 1; i >= 0; i--) {",
+			"\t$0",
+			"}"
+		],
+		"description": "Create a reverse for loop with 'i' ranging from n-1 to 0"
+	},
+	"java-reverse-for-loop-i-n-to-1": {
+		"prefix": "rfori1",
+		"body": [
+			"for (int i = n; i >= 1; i--) {",
+			"\t$0",
+			"}"
+		],
+		"description": "Create a reverse for loop with 'i' ranging from n to 1"
+	},
+	"java-reverse-for-loop-j-n-1-to-0": {
+		"prefix": "rforj0",
+		"body": [
+			"for (int j = n - 1; j >= 0; j--) {",
+			"\t$0",
+			"}"
+		],
+		"description": "Create a reverse for loop with 'j' ranging from n-1 to 0"
+	},
+	"java-reverse-for-loop-j-n-to-1": {
+		"prefix": "rforj1",
+		"body": [
+			"for (int j = n; j >= 1; j--) {",
+			"\t$0",
+			"}"
+		],
+		"description": "Create a reverse for loop with 'j' ranging from n to 1"
+	},
+	"java-reverse-for-loop-k-n-1-to-0": {
+		"prefix": "rfork0",
+		"body": [
+			"for (int k = n - 1; k >= 0; k--) {",
+			"\t$0",
+			"}"
+		],
+		"description": "Create a reverse for loop with 'k' ranging from n-1 to 0"
+	},
+	"java-reverse-for-loop-k-n-to-1": {
+		"prefix": "rfork1",
+		"body": [
+			"for (int k = n; k >= 1; k--) {",
+			"\t$0",
+			"}"
+		],
+		"description": "Create a reverse for loop with 'k' ranging from n to 1"
+	},
+}
