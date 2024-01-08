@@ -4,7 +4,7 @@
 		"body": [
 			"/*",
 			"*\tAuthor: rishabhxchoudhary",
-			"*\tCreated: ${CURRENT_DATE}.${CURRENT_MONTH}.${CURRENT_YEAR} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+			"*\tCreated: ${CURRENT_DATE}.${CURRENT_MONTH}.${CURRENT_YEAR} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND} (GMT+5:30)",
 			"*/",
 			"#include \"bits/stdc++.h\"",
 			"using namespace std;",
@@ -40,7 +40,7 @@
 		"body": [
 			"/*",
 			"*\tAuthor: rishabhxchoudhary",
-			"*\tCreated: ${CURRENT_DATE}.${CURRENT_MONTH}.${CURRENT_YEAR} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+			"*\tCreated: ${CURRENT_DATE}.${CURRENT_MONTH}.${CURRENT_YEAR} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND} (GMT+5:30)",
 			"*/",
 			"#include \"bits/stdc++.h\"",
 			"using namespace std;",
