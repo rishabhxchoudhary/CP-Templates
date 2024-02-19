@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[
+
+int gcd(int a, int b) {
+    return b == 0 ? a : gcd(b, a % b);
+}
+
+int lcm(int a, int b) {
+    return (a / gcd(a, b)) * b;
+}
+
+]]></content>
+  <tabTrigger>gcdlcm</tabTrigger>
+  <description></description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope >source.c++</scope >
+</snippet>

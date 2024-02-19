@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[
+vector<vector<int>> matrix_multiply(vector<vector<int>> a,vector<vector<int>> b){
+    vector<vector<int>> c(a.size(),vector<int>(b[0].size(),0));
+    for (int i = 0; i < (int)a.size(); i++) {
+        for (int j = 0; j < (int)b[0].size(); j++) {
+            for (int k = 0; k < (int)a[0].size(); k++) {
+                c[i][j] += (a[i][k]*b[k][j])%MOD;
+                c[i][j] = (c[i][j]%MOD);
+            }
+        }
+    }
+    return c;
+}
+]]></content>
+  <tabTrigger>matrixmultiply</tabTrigger>
+  <description></description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope >source.c++</scope >
+</snippet>

@@ -1,0 +1,49 @@
+<snippet>
+  <content><![CDATA[
+class DSU {
+    private:
+        vector<int> p,rank,setSize;
+        int numSets;
+    public:
+        DSU(int n) {
+            p.assign(n,0);
+            for (int i = 0; i < n; i++) {
+                p[i] = i;
+            }
+            rank.assign(n,0); // height of all trees are 0.
+            setSize.assign(n,1); // size of individual sets are 1
+            numSets = n;
+        }
+
+        int find(int x) {
+            if (p[x]==x) return x;
+            return p[x] = find(p[x]); // path compression
+        }
+
+        bool same(int x, int y) {return find(x)==find(y);}
+
+        void merge(int i, int j) {
+            if (same(i,j)) return;
+            int x = find(i);
+            int y = find(j);
+            if (rank[x]>rank[y]) swap(x,y);
+            p[x] = y;
+            if (rank[x]==rank[y]) rank[y]++;
+            setSize[y] += setSize[x];
+            numSets--;
+        }
+
+        int size(int x) {
+            return setSize[x];
+        }
+
+        int numDisjointSets() {
+            return numSets;
+        }
+};
+]]></content>
+  <tabTrigger>DSU</tabTrigger>
+  <description></description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope >source.c++</scope >
+</snippet>

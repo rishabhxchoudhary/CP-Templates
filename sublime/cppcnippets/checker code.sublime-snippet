@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[
+#ifndef ONLINE_JUDGE
+    function<bool(string,string)> compareFiles = [](string p1, string p2)->bool {
+        std::ifstream file1(p1);
+        std::ifstream file2(p2);
+        if (!file1.is_open() || !file2.is_open()){
+            return false;
+        }
+        cerr<<"checking.... ";
+        std::string line1, line2;
+        while (std::getline(file1, line1) && std::getline(file2, line2)) {
+            if (line1 != line2)
+                return false;
+        }
+        return file1.eof() && file2.eof();
+    };
+    bool check = compareFiles("output.txt","expected.txt");
+    if (check) cerr<<"OK\n";
+    else cerr<<"Failed!\n";
+#endif
+]]></content>
+  <tabTrigger>checker</tabTrigger>
+  <description></description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope >source.c++</scope >
+</snippet>

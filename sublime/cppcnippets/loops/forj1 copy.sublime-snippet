@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+for (int k = 1; k <= n; k++) {
+    $0
+}
+]]></content>
+  <tabTrigger>fork1</tabTrigger>
+  <description></description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope >source.c++</scope >
+</snippet>

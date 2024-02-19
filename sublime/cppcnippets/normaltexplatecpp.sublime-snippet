@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[
+/*
+*    Author: rishabhxchoudhary
+*    Created: $CURRENT_DATETIME
+*/
+#include <bits/stdc++.h>
+using namespace std;
+
+#define int long long int
+#define double long double
+#define endl '\n'
+
+const int MOD = 1000000007;
+
+signed main()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);cout.tie(0);
+
+    $0
+
+    return 0;
+}
+]]></content>
+  <tabTrigger>normaltemplate</tabTrigger>
+  <description></description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope >source.c++</scope >
+</snippet>

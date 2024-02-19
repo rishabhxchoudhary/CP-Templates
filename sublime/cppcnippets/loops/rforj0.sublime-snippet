@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+for (int j = n-1; j >= 0; j--) {
+    $0
+}
+]]></content>
+  <tabTrigger>rforj0</tabTrigger>
+  <description></description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope >source.c++</scope >
+</snippet>

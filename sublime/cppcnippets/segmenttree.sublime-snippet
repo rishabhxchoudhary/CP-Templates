@@ -1,0 +1,69 @@
+<snippet>
+  <content><![CDATA[
+vector<int> tree;
+vector<int> lazy;
+int sz;
+ 
+void propagate(int node, int node_low, int node_high) {
+    if (lazy[node]!=0) {
+        tree[node] += lazy[node] * (node_high-node_low+1);
+        if (node_low != node_high ){
+            lazy[2*node] += lazy[node];
+            lazy[2*node+1] += lazy[node];
+        }
+        lazy[node]=0;
+    }
+}
+ 
+void rangeUpdate(int low, int high, int val,int node = 1, int node_low = 0, int node_high = sz-1) {
+    propagate(node,node_low,node_high);
+    if (low>high || low > node_high || high < node_low ) return;
+    if (low<=node_low && high >= node_high){
+        lazy[node]+=val;
+        propagate(node,node_low,node_high);
+        return;
+    }
+    int mid = (node_low + node_high) / 2;
+    rangeUpdate(low,high,val,2*node,node_low,mid);
+    rangeUpdate(low,high,val,2*node+1,mid+1,node_high);
+    tree[node] = tree[2*node] + tree[2*node+1];
+}
+ 
+int rangeQuery(int low, int high,int node = 1, int node_low = 0, int node_high = sz-1){
+    propagate(node,node_low,node_high);
+    if (low>high || low > node_high || high < node_low ) return 0;
+    if (low<=node_low && high >= node_high){
+        return tree[node];
+    }
+    int mid = (node_low + node_high) / 2;
+    return rangeQuery(low,high, 2*node,node_low,mid) + rangeQuery(low,high, 2*node+1,mid+1,node_high); 
+};
+ 
+int pointQuery(int pos) {
+    return rangeQuery(pos,pos);
+}
+ 
+void pointUpdate(int pos,int val) {
+    rangeUpdate(pos,pos,val);
+}
+ 
+void build(vector<int> &arr) {
+    tree.clear();
+    lazy.clear();
+    int n = arr.size();
+    if (n==1) sz=2;
+    else sz = 1;
+    while(sz<n) sz = sz*2;
+    tree.resize(2*sz);
+    lazy.resize(2*sz);
+    for (int i = 0; i < n; i++) {
+        pointUpdate(i,arr[i]);
+    }
+}
+
+]]></content>
+  <tabTrigger>segmenttree</tabTrigger>
+  <description></description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope >source.c++</scope >
+</snippet>

@@ -1,0 +1,42 @@
+<snippet>
+  <content><![CDATA[
+
+// Order Static Tree using Fenwick Trees
+const int N = 2e5+1;
+int BIT[N];
+void update(int i, int val) {
+    while (i > 0 && i<N) {
+        BIT[i]+=val;
+        i = i + (i&-i);
+    }
+}
+int query(int i){
+    int ans = 0;
+    while (i>0){
+        ans += BIT[i];
+        i = i - (i&-i);
+    }
+    return ans;
+}
+int findKthSmallest(int k){
+    int l = 0, h = N;
+    while (l<h){
+        int mid = l + (h-l)/2;
+        if (k<=query(mid)){
+            h = mid;
+        } else {
+            l = mid+1;
+        }
+    }
+    return l;
+}
+void insert(int val) {update(val,1);}
+void del(int val) {update(val,-1);}
+int findRank(int val) {return query(val);}
+
+]]></content>
+  <tabTrigger>orderstaticbittree</tabTrigger>
+  <description></description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope >source.c++</scope >
+</snippet>

@@ -1,0 +1,11 @@
+{
+	"font_size": 20,
+	"color_scheme": "Monokai.sublime-color-scheme",
+	"index_files": true,
+	"font_face": "Jetbrains Mono",
+	"save_on_focus_lost": true,
+	"trim_automatic_white_space": false,
+	"translate_tabs_to_spaces": true,
+	"tab_size": 4,
+	// "draw_white_space": "all",
+}

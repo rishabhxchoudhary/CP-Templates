@@ -1,0 +1,10 @@
+{
+    // Your Codeforces directory default is "~/Sublime Text/Packages/Users/CPParser/Codeforces"
+    "CODEFORCES_DIR": "/Users/rishabh/Desktop/codetest",
+    // Your Codechef directory default is "~/Sublime Text/Packages/Users/CPParser/Codechef"
+    "CODECHEF_DIR": "/Users/rishabh/Desktop/codetest",
+    // Only cpp is supported for now so don't change this, I'll try to add more supported languages
+    "EXTENSION": "cpp",
+    // Initials code snippet txt file you want to load for eg: "/Users/hritik/Documents/Contests/code.txt"
+    "SNIPPETS": "",
+}

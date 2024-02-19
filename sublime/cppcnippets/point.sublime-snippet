@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[
+struct Point {
+    int x, y;
+    void read() {
+        cin >> x >> y;
+    }
+    Point operator - (const Point &b) const {
+        return Point {x - b.x , y - b.y};
+    }
+    Point operator + (const Point &b) const {
+        return Point {x + b.x , y + b.y};
+    }
+    void operator -= (const Point &b)  {
+        x -= b.x; y -= b.y;
+    }
+    void operator += (const Point &b)  {
+        x += b.x; y += b.y;
+    }
+    int operator *(const Point &b) const {
+        return x * b.y - y * b.x;
+    }
+    bool operator < (const Point &b ) const {
+        return make_pair(x,y) < make_pair(b.x,b.y);
+    }
+};
+
+]]></content>
+  <tabTrigger>point</tabTrigger>
+  <description></description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope >source.c++</scope >
+</snippet>

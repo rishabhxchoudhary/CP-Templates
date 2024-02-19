@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+# Author: rishabhxchoudhary
+# Created: $CURRENT_DATETIME
+import sys
+sys.setrecursionlimit(2147483647)
+MOD = 1000000007
+input = sys.stdin.readline
+    
+def solve():
+    $0
+    pass
+
+t = int(input())
+for _ in range(t):
+    solve()
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>cptemplate</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.python</scope>
+</snippet>

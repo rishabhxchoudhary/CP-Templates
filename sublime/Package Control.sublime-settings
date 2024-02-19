@@ -1,0 +1,15 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"C++ Completions",
+		"CP Parser",
+		"CppFastOlympicCoding",
+		"Package Control",
+		"Python Completions",
+		"Terminus",
+	],
+}
